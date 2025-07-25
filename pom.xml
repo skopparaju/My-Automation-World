@@ -1,226 +1,122 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>BDD</groupId>
-	<artifactId>CucumberAutomation</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>BDD</groupId>
+    <artifactId>CucumberAutomation</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
-	<dependencies>
-		<!-- https://mvnrepository.com/artifact/junit/junit -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.13.1</version>
-			<scope>test</scope>
-		</dependency>
-
-
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>3.141.59</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-		<dependency>
-			<groupId>io.github.bonigarcia</groupId>
-			<artifactId>webdrivermanager</artifactId>
-			<version>4.3.1</version>
-		</dependency>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.1</version>
+            <scope>test</scope>
+        </dependency>
 
 
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
 
-		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-junit</artifactId>
-			<version>1.2.5</version>
-			<scope>test</scope>
-		</dependency>
-
-
-		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-java</artifactId>
-			<version>1.2.5</version>
-		</dependency>
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.8.0</version>
+        </dependency>
 
 
-		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-jvm -->
-		<dependency>
-			<groupId>info.cukes</groupId>
-			<artifactId>cucumber-jvm</artifactId>
-			<version>1.2.5</version>
-			<type>pom</type>
-		</dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.15.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.15.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.4.20</version>
+            <scope>test</scope>
+        </dependency>
 
 
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>4.1.2</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>4.1.2</version>
-		</dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>4.1.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>4.1.2</version>
+        </dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.vimalselvam/cucumber-extentsreport -->
-		<dependency>
-			<groupId>com.vimalselvam</groupId>
-			<artifactId>cucumber-extentsreport</artifactId>
-			<version>3.1.1</version>
-		</dependency>
-
-
-		<dependency>
-			<groupId>com.aventstack</groupId>
-			<artifactId>extentreports</artifactId>
-			<version>3.1.2</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.jongo</groupId>
-			<artifactId>jongo</artifactId>
-			<version>0.4</version>
-		</dependency>
-		<dependency>
-			<groupId>org.mongodb</groupId>
-			<artifactId>mongo-java-driver</artifactId>
-			<version>2.4</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.github.temyers/cucumber-jvm-parallel-plugin -->
-		<dependency>
-			<groupId>com.github.temyers</groupId>
-			<artifactId>cucumber-jvm-parallel-plugin</artifactId>
-			<version>4.2.0</version>
-		</dependency>
-<!-- https://mvnrepository.com/artifact/org.zeroturnaround/zt-zip -->
-<dependency>
-    <groupId>org.zeroturnaround</groupId>
-    <artifactId>zt-zip</artifactId>
-    <version>1.13</version>
-</dependency>
+        <dependency>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>extentreports-cucumber7-adapter</artifactId>
+            <version>1.14.0</version>
+            <scope>test</scope>
+        </dependency>
 
 
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.1.0</version>
+        </dependency>
 
-	</dependencies>
-
-	<build>
-
-		<plugins>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
-				<configuration>
-					<fork>true</fork>
-					<executable>C:\Program Files\Java\jdk1.8.0_131\bin\javac.exe</executable>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-surefire-plugin</artifactId> 
-				<version>3.0.0-M1</version> <configuration> <parallel>methods</parallel> 
-				<threadCount>4</threadCount> <useUnlimitedThreads>true</useUnlimitedThreads> 
-				<forkCount>3</forkCount> <reuseForks>true</reuseForks> </configuration> </plugin> -->
-			<!-- <plugin> <artifactId>maven-compiler-plugin</artifactId> <version>3.1</version> 
-				<configuration> <fork>true</fork> <executable>C:\Program Files\Java\jdk1.8.0_131\bin\javac.exe</executable> 
-				</configuration> </plugin> -->
-
-			<plugin>
-				<groupId>com.github.temyers</groupId>
-				<artifactId>cucumber-jvm-parallel-plugin</artifactId>
-				<version>4.0.0</version>
-				<executions>
-					<execution>
-						<id>generateRunners</id>
-						<phase>validate</phase>
-						<goals>
-							<goal>generateRunners</goal>
-						</goals>
-						<configuration>
-							<glue>
-								<pakage>com.app.stepdefinitions</pakage>
-							</glue>
-							<featuresDirectory>src/test/resources/Features</featuresDirectory>
-							<cucumberOutputDir>${project.basedir}/Reports</cucumberOutputDir>
-							<plugins>
-								<plugin>
-									<name>com.vimalselvam.cucumber.listener.ExtentCucumberFormatter</name>
-									<extension>html</extension>
-								</plugin>
-							</plugins>
-						<!-- you can add scenarios tags to run parallel -->
-							<tags>
-								<tag>@NavigateMobilesPage,@ValidateSortOptions1</tag>
-							</tags>
-
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+        <dependency>
+            <groupId>org.jongo</groupId>
+            <artifactId>jongo</artifactId>
+            <version>0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>2.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.zeroturnaround/zt-zip -->
+        <dependency>
+            <groupId>org.zeroturnaround</groupId>
+            <artifactId>zt-zip</artifactId>
+            <version>1.13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.32</version>
+            <scope>provided</scope>
+        </dependency>
 
 
+    </dependencies>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.19</version>
-				<configuration>
-					<forkCount>2</forkCount>
-					<reuseForks>true</reuseForks>
-					<!-- comment below plugin for sequncial execution -->
-					<includes>
-						 <include>**/Parallel*IT.class</include> 
-						<!-- <include>**/*TestRunner.java</include> -->
-					</includes>
-				</configuration>
-			</plugin>
-		</plugins>
-		<pluginManagement>
-			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											com.github.temyers
-										</groupId>
-										<artifactId>
-											cucumber-jvm-parallel-plugin
-										</artifactId>
-										<versionRange>
-											[2.2.0,)
-										</versionRange>
-										<goals>
-											<goal>generateRunners</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore></ignore>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
+    <build>
 
+        <plugins>
 
-			</plugins>
-		</pluginManagement>
-	</build>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>21</source>
+                    <target>21</target>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
 </project>

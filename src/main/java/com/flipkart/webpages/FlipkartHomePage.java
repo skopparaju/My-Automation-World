@@ -11,7 +11,7 @@ public class FlipkartHomePage extends WebPageActions {
 	
 	By closeButton = By.xpath("(//div/button)[2]");
 	
-	By mobiles = By.xpath("//div[contains(text(),'Mobiles')]");
+	By mobiles = By.xpath("//span[contains(text(),'Mobiles')]");
 	
 	By searchBar = By.name("q");
 	
