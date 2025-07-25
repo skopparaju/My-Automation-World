@@ -24,7 +24,7 @@ public class FlipkartStepdefinition {
         Thread.sleep(1000);
         FHP.clickMobiles();
         actual = FHP.getTitle();
-        expected = "Mobile Phones Online at Best Prices in India1";
+        expected = "Mobile Phones Online at Best Prices in India";
         assertEquals("Mismatch in page title ",expected, actual);
         ExtentCucumberAdapter.addTestStepLog("Successfully navigated to mobiles page");
     }

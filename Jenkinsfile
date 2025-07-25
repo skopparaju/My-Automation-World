@@ -2,14 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/skopparaju/My-Automation-World.git'
-            }
-        }
+
         stage('Build') {
             steps {
-                sh 'mvn clean install'
+                sh 'mvn clean'
             }
         }
         stage('Test') {
