@@ -1,0 +1,10 @@
+Project path : System.getProperty("user.dir")
+
+
+mvn test -Dcucumber.options="src/test/resources/Features/Flipkart.feature"
+
+
+mvn test -Dcucumber.options="--tags '@smoke'"
+
+
+
