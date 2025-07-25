@@ -1,22 +1,22 @@
 pipeline {
-    agent any
+            agent any
 
-    stages {
+            stages {
 
-        stage('Build') {
-            steps {
-                sh 'mvn clean'
+                stage('Build') {
+                    steps {
+                        bat 'mvn clean'
+                    }
+                }
+                stage('Test') {
+                    steps {
+                        bat 'mvn test'
+                    }
+                }
+            }
+            post {
+                always {
+                    junit '**/target/surefire-reports/*.xml'
+                }
             }
         }
-        stage('Test') {
-            steps {
-                sh 'mvn test'
-            }
-        }
-    }
-    post {
-        always {
-            junit '**/target/surefire-reports/*.xml'
-        }
-    }
-}
