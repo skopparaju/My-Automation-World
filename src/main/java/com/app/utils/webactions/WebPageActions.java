@@ -1,4 +1,4 @@
-package com.app.webactions;
+package com.app.utils.webactions;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.zeroturnaround.zip.ZipUtil;
-import com.app.filehandles.PropertyFileHandling;
+import com.app.utils.filehandles.PropertyFileHandling;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
