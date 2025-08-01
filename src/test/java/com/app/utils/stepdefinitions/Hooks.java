@@ -1,8 +1,7 @@
-package com.app.stepdefinitions;
+package com.app.utils.stepdefinitions;
 
-import com.app.webactions.WebPageActions;
+import com.app.utils.webactions.WebPageActions;
 import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
-import com.aventstack.extentreports.model.Report;
 import com.aventstack.extentreports.service.ExtentService;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.After;

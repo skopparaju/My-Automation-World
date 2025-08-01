@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 
-import com.app.webactions.WebPageActions;
+import com.app.utils.webactions.WebPageActions;
 
 public class FlipkartHomePage extends WebPageActions {
 	
