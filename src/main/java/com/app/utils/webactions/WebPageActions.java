@@ -1,6 +1,7 @@
 package com.app.utils.webactions;
 
 import java.io.File;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +14,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.zeroturnaround.zip.ZipUtil;
 import com.app.utils.filehandles.PropertyFileHandling;
 
@@ -21,6 +24,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class WebPageActions extends PropertyFileHandling {
 
     static WebDriver driver;
+    public static long TIME_OUT_SECONDS=30;
 
     public void launchBroswer(String browserType) {
         if (browserType.equalsIgnoreCase("Chrome")) {
@@ -78,6 +82,7 @@ public class WebPageActions extends PropertyFileHandling {
     }
 
     public void clickElement(By locator) {
+        waitForElementToBeClickable(locator);
         getElement(locator).click();
     }
 
@@ -100,6 +105,12 @@ public class WebPageActions extends PropertyFileHandling {
         }
         return listData;
     }
+
+    public WebElement waitForElementToBeClickable(By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(TIME_OUT_SECONDS));
+        return wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
 
     public void pressEnter(By locator) {
         getElement(locator).sendKeys(Keys.ENTER);
